@@ -1,0 +1,453 @@
+/* ShaDGramers : site de l'éditeur.
+   Sans police ni script externe : rien n'est chargé depuis un autre site. */
+
+:root {
+  --fond: #FBF8F3;
+  --surface: #FFFFFF;
+  --texte: #2B2623;
+  --texte-doux: #5F5750;
+  --bordure: #E7DFD3;
+  --prune: #3B2C37;
+  --prune-fonce: #201D1D;
+  --or: #E2A655;
+  --or-texte: #8A5A12;
+  --beige: #F2E6C9;
+
+  --rayon: 16px;
+  --largeur: 1040px;
+  --texte-largeur: 680px;
+  --gouttiere: 16px;
+
+  --corps: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--corps);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--or-texte);
+  text-underline-offset: 3px;
+}
+
+a:focus-visible,
+.bouton:focus-visible {
+  outline: 3px solid var(--or);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 0 var(--gouttiere);
+}
+
+.lien-evitement {
+  position: absolute;
+  left: -9999px;
+}
+
+.lien-evitement:focus {
+  left: 16px;
+  top: 16px;
+  background: var(--surface);
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+/* En-tête */
+
+.entete {
+  border-bottom: 1px solid var(--bordure);
+  background: var(--fond);
+}
+
+.entete .conteneur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+
+.marque {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--texte);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.marque span {
+  color: var(--or-texte);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px 18px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--texte);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 6px 0;
+  display: inline-block;
+}
+
+.nav a[aria-current='page'] {
+  color: var(--or-texte);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Blocs */
+
+.section {
+  padding: 48px 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--bordure);
+}
+
+.intro {
+  padding: 48px 0 8px;
+}
+
+.intro + .section {
+  padding-top: 24px;
+}
+
+.intro p {
+  font-size: 1.15rem;
+  color: var(--texte-doux);
+  max-width: 620px;
+}
+
+.surtitre {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--or-texte);
+  margin-bottom: 8px;
+}
+
+.doux {
+  color: var(--texte-doux);
+}
+
+/* Bloc SIPA, aux couleurs du jeu */
+
+.carte-sipa {
+  background: linear-gradient(150deg, var(--prune), var(--prune-fonce));
+  color: var(--beige);
+  border-radius: 24px;
+  padding: 28px 20px;
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.carte-sipa h2 {
+  color: #FFFFFF;
+}
+
+.carte-sipa .surtitre {
+  color: var(--or);
+}
+
+.carte-sipa p {
+  color: rgba(242, 230, 201, 0.86);
+}
+
+.carte-sipa a:not(.bouton) {
+  color: var(--or);
+}
+
+.carte-sipa .capture {
+  justify-self: center;
+  width: min(240px, 70%);
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.logo-sipa {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+}
+
+.liste-points {
+  margin: 0 0 1.2em;
+  padding-left: 1.2em;
+}
+
+.liste-points li {
+  margin-bottom: 0.3em;
+}
+
+.boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+
+.bouton-plein {
+  background: #FFFFFF;
+  color: var(--prune);
+}
+
+.bouton-contour {
+  border-color: rgba(226, 166, 85, 0.6);
+  color: var(--beige);
+}
+
+.bouton-prune {
+  background: var(--prune);
+  color: #FFFFFF;
+}
+
+/* Cartes simples */
+
+.grille {
+  display: grid;
+  gap: 16px;
+}
+
+.tuile {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 22px 20px;
+}
+
+.tuile p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pages de texte */
+
+.page {
+  padding: 40px 0 56px;
+}
+
+.page .texte {
+  max-width: var(--texte-largeur);
+}
+
+.page h1 {
+  margin-bottom: 0.4em;
+}
+
+.page h2 {
+  font-size: 1.45rem;
+  margin-top: 1.8em;
+}
+
+.page .chapeau {
+  font-size: 1.15rem;
+  color: var(--texte-doux);
+}
+
+.page figure {
+  margin: 28px 0;
+}
+
+.page figure img {
+  width: min(260px, 72%);
+  border-radius: 28px;
+  margin: 0 auto;
+  box-shadow: 0 14px 32px rgba(32, 29, 29, 0.25);
+}
+
+.page figcaption {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--texte-doux);
+  margin-top: 12px;
+}
+
+.encadre {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-left: 4px solid var(--or);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 24px 0;
+}
+
+.encadre p:last-child {
+  margin-bottom: 0;
+}
+
+table.points {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 0.98rem;
+}
+
+table.points th,
+table.points td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--bordure);
+}
+
+table.points th {
+  font-weight: 700;
+}
+
+table.points td:last-child,
+table.points th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.carte {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.rouge {
+  color: #B23B25;
+}
+
+.maj {
+  font-size: 0.92rem;
+  color: var(--texte-doux);
+}
+
+/* Pied de page */
+
+.pied {
+  border-top: 1px solid var(--bordure);
+  padding: 28px 0 36px;
+  font-size: 0.95rem;
+  color: var(--texte-doux);
+}
+
+.pied .conteneur {
+  display: grid;
+  gap: 14px;
+}
+
+.pied ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.pied a {
+  color: var(--texte);
+}
+
+@media (min-width: 760px) {
+  :root {
+    --gouttiere: 32px;
+  }
+
+  .carte-sipa {
+    grid-template-columns: 1.4fr 1fr;
+    padding: 44px 48px;
+  }
+
+  .carte-sipa .capture {
+    width: 250px;
+  }
+
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pied .conteneur {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+.liens-sipa {
+  margin-top: 18px;
+}
+
+.copyright {
+  margin: 0;
+}
