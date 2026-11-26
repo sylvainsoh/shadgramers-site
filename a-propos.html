@@ -4,59 +4,86 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>À propos | ShaDGramers</title>
-  <meta name="description" content="ShaDGramers, c'est un développeur seul : le jeu de cartes SIPA et une chaîne YouTube sur la tech.">
+  <meta name="description" content="ShaDGramers, notre startup : le jeu de cartes SIPA et une chaîne YouTube sur la tech.">
+  <meta name="theme-color" content="#B02B24">
   <link rel="canonical" href="https://shadgramers.com/a-propos">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
+  <script src="/js/site.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="À propos | ShaDGramers">
+  <meta property="og:url" content="https://shadgramers.com/a-propos">
+  <meta property="og:image" content="https://shadgramers.com/images/og.jpg">
+  <meta property="og:locale" content="fr_FR">
 </head>
 <body>
   <a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
-  <header class="entete">
+  <div class="bandeau-page">
+    <div class="symbole-filigrane" aria-hidden="true"></div>
+    <header class="entete">
+      <div class="conteneur">
+        <a class="marque" href="/">
+          <svg class="marque-symbole" viewBox="267 203 373 336" aria-hidden="true"><path fill="currentColor" d="M267 235C267 217 281 203 303 203H338L334 222V471H500C545 471 566 466 590 451L640 424L604 486C584 520 550 539 500 539H303C281 539 267 525 267 503Z"/><path fill="currentColor" d="M356 272C356 258 366 249 382 249H515C563 249 591 277 591 325V385C591 432 560 455 508 460.5C514 447 524 420 524 392V340C524 316 508 301.5 484 301.5H356Z"/></svg>
+          <img class="marque-nom" src="/images/nom-shadgramers.svg" alt="ShaDGramers, accueil" width="188" height="10">
+        </a>
+        <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span class="ligne"></span></button>
+        <nav class="nav" id="menu" aria-label="Menu principal">
+          <ul>
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#youtube">YouTube</a></li>
+            <li><a href="/a-propos" aria-current="page">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="conteneur">
-      <a class="marque" href="/">ShaD<span>Gramers</span></a>
-      <nav class="nav" aria-label="Menu principal">
-        <ul>
-          <li><a href="/sipa">Le jeu SIPA</a></li>
-          <li><a href="/a-propos" aria-current="page">À propos</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="titre-page">
+        <h1 class="entree">À propos</h1>
+        <p class="chapeau entree" style="--delai: 140ms">ShaDGramers, c’est notre startup : nous y lançons nos projets, à commencer par le jeu de cartes SIPA et une chaîne YouTube sur la tech.</p>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <main id="contenu" class="page">
+  <main id="contenu" class="page fond-clair">
     <div class="conteneur">
       <article class="texte">
-<h1>À propos</h1>
-        <p class="chapeau">ShaDGramers est le nom sous lequel je publie mes projets personnels : le jeu de cartes SIPA et une chaîne YouTube.</p>
-
-        <h2>Un développeur, seul</h2>
-        <p>Je suis développeur. Sur SIPA, je fais tout moi-même : la conception, le code de l'app, le serveur des parties en ligne et les réponses aux joueurs.</p>
-        <p>ShaDGramers, c'est aussi une <a href="https://www.youtube.com/@shadgramers">chaîne YouTube</a> : des vidéos en français sur l'actualité tech, les smartphones et la vie numérique.</p>
+        <h2>Ce que nous faisons</h2>
+        <p>Nous concevons, codons et faisons vivre nos projets nous-mêmes : la conception, le code des apps, les serveurs et les réponses aux joueurs.</p>
+        <p>ShaDGramers, c’est aussi une <a href="https://www.youtube.com/@shadgramers">chaîne YouTube</a> : des vidéos en français sur l’actualité tech, les smartphones et la vie numérique.</p>
 
         <h2>SIPA</h2>
-        <p>SIPA est mon projet principal : faire du jeu de cartes traditionnel une app soignée, à jouer seul ou à deux, sur Android, sur iPhone et dans le navigateur.</p>
-        <p>L'app est écrite avec Flutter, ce qui permet d'avoir le même jeu sur les trois plateformes. Les parties en ligne passent par mon propre serveur, qui distribue les cartes et arbitre chaque coup : aucun joueur ne peut voir la main de son adversaire.</p>
-        <p>Les joueurs m'aident beaucoup. Leurs messages, leurs signalements et leurs réponses aux sondages de l'app décident souvent de la suite.</p>
+        <p>SIPA est notre projet principal : faire du jeu de cartes traditionnel une app soignée, à jouer seul ou à deux, sur Android, sur iPhone et dans le navigateur.</p>
+        <p>L’app est écrite avec Flutter, ce qui permet d’avoir le même jeu sur les trois plateformes. Les parties en ligne passent par notre propre serveur, qui distribue les cartes et arbitre chaque coup : aucun joueur ne peut voir la main de son adversaire.</p>
+        <p>Les joueurs nous aident beaucoup. Leurs messages, leurs signalements et leurs réponses aux sondages de l’app décident souvent de la suite.</p>
         <p><a href="/sipa">Comment se joue le SIPA</a></p>
 
-        <h2>Me contacter</h2>
-        <p>Pour une question ou une idée, toutes les façons de m'écrire sont sur la page <a href="/contact">Contact</a>.</p>
+        <h2>Nous écrire</h2>
+        <p>Pour une question ou une idée, toutes les façons de nous écrire sont sur la page <a href="/contact">Contact</a>.</p>
       </article>
     </div>
   </main>
 
   <footer class="pied">
     <div class="conteneur">
-      <nav aria-label="Liens du site">
-        <ul>
-          <li><a href="/sipa">Le jeu SIPA</a></li>
-          <li><a href="/a-propos" aria-current="page">À propos</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/confidentialite">Confidentialité</a></li>
-        </ul>
-      </nav>
+      <div class="pied-haut">
+        <a class="marque" href="/">
+          <svg class="marque-symbole" viewBox="267 203 373 336" aria-hidden="true"><path fill="currentColor" d="M267 235C267 217 281 203 303 203H338L334 222V471H500C545 471 566 466 590 451L640 424L604 486C584 520 550 539 500 539H303C281 539 267 525 267 503Z"/><path fill="currentColor" d="M356 272C356 258 366 249 382 249H515C563 249 591 277 591 325V385C591 432 560 455 508 460.5C514 447 524 420 524 392V340C524 316 508 301.5 484 301.5H356Z"/></svg>
+          <img class="marque-nom" src="/images/nom-shadgramers.svg" alt="ShaDGramers, accueil" width="168" height="9">
+        </a>
+        <nav aria-label="Liens du site">
+          <ul>
+            <li><a href="/sipa">Le jeu SIPA</a></li>
+            <li><a href="https://www.youtube.com/@shadgramers">YouTube</a></li>
+            <li><a href="/a-propos" aria-current="page">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/confidentialite">Confidentialité</a></li>
+          </ul>
+        </nav>
+      </div>
       <p class="copyright">© 2026 ShaDGramers</p>
     </div>
   </footer>

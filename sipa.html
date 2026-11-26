@@ -4,47 +4,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le SIPA, comment ça se joue | ShaDGramers</title>
-  <meta name="description" content="Les règles du SIPA, le jeu de cartes d'Afrique de l'Ouest à 28 cartes : la donne, les levées, les points de la dernière levée et un exemple commenté.">
+  <meta name="description" content="Les règles du SIPA, le jeu de cartes d’Afrique de l’Ouest à 28 cartes : la donne, les levées, les points de la dernière levée et un exemple commenté.">
+  <meta name="theme-color" content="#B02B24">
   <link rel="canonical" href="https://shadgramers.com/sipa">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
+  <script src="/js/site.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Le SIPA, comment ça se joue | ShaDGramers">
+  <meta property="og:url" content="https://shadgramers.com/sipa">
+  <meta property="og:image" content="https://shadgramers.com/images/og.jpg">
+  <meta property="og:locale" content="fr_FR">
 </head>
 <body>
   <a class="lien-evitement" href="#contenu">Aller au contenu</a>
 
-  <header class="entete">
+  <div class="bandeau-page">
+    <div class="symbole-filigrane" aria-hidden="true"></div>
+    <header class="entete">
+      <div class="conteneur">
+        <a class="marque" href="/">
+          <svg class="marque-symbole" viewBox="267 203 373 336" aria-hidden="true"><path fill="currentColor" d="M267 235C267 217 281 203 303 203H338L334 222V471H500C545 471 566 466 590 451L640 424L604 486C584 520 550 539 500 539H303C281 539 267 525 267 503Z"/><path fill="currentColor" d="M356 272C356 258 366 249 382 249H515C563 249 591 277 591 325V385C591 432 560 455 508 460.5C514 447 524 420 524 392V340C524 316 508 301.5 484 301.5H356Z"/></svg>
+          <img class="marque-nom" src="/images/nom-shadgramers.svg" alt="ShaDGramers, accueil" width="188" height="10">
+        </a>
+        <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span class="ligne"></span></button>
+        <nav class="nav" id="menu" aria-label="Menu principal">
+          <ul>
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#youtube">YouTube</a></li>
+            <li><a href="/a-propos">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="conteneur">
-      <a class="marque" href="/">ShaD<span>Gramers</span></a>
-      <nav class="nav" aria-label="Menu principal">
-        <ul>
-          <li><a href="/sipa" aria-current="page">Le jeu SIPA</a></li>
-          <li><a href="/a-propos">À propos</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="titre-page">
+        <h1 class="entree">Le SIPA, comment ça se joue</h1>
+        <p class="chapeau entree" style="--delai: 140ms">Le SIPA est un jeu de cartes à deux joueurs, joué en Afrique de l’Ouest, notamment au Togo. Les règles tiennent en quelques lignes, mais tout se décide à la dernière levée.</p>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <main id="contenu" class="page">
+  <main id="contenu" class="page fond-clair">
     <div class="conteneur">
       <article class="texte">
-<h1>Le SIPA, comment ça se joue</h1>
-        <p class="chapeau">Le SIPA est un jeu de cartes à deux joueurs, joué en Afrique de l'Ouest, notamment au Togo. Les règles tiennent en quelques lignes, mais tout se décide à la dernière levée. Voici comment se déroule une manche, et comment y jouer avec l'app SIPA.</p>
-
         <h2>Le paquet et la donne</h2>
-        <p>On joue avec 28 cartes : 7, 8, 9, 10, Valet, Dame et Roi, dans les quatre couleurs. Il n'y a ni as ni atout. Le Roi est la carte la plus forte, puis la Dame, le Valet, le 10, le 9, le 8, et enfin le 7.</p>
-        <p>Chaque joueur reçoit cinq cartes, distribuées en deux fois : trois cartes chacun, puis deux. Dans l'app, une main contient toujours au moins un 10 ou une figure, au moins deux couleurs, et jamais trois 7.</p>
+        <p>On joue avec 28 cartes : 7, 8, 9, 10, Valet, Dame et Roi, dans les quatre couleurs. Il n’y a ni as ni atout. Le Roi est la carte la plus forte, puis la Dame, le Valet, le 10, le 9, le 8, et enfin le 7.</p>
+        <p>Chaque joueur reçoit cinq cartes, distribuées en deux fois : trois cartes chacun, puis deux. Dans l’app, une main contient toujours au moins un 10 ou une figure, au moins deux couleurs, et jamais trois 7.</p>
 
         <h2>Jouer une levée</h2>
-        <p>Le joueur qui a la main pose une carte. L'autre doit fournir la couleur demandée s'il le peut. La carte la plus forte de cette couleur remporte la levée, et son joueur commence la suivante.</p>
-        <p>S'il n'a pas la couleur, il pose une carte face cachée. Cette carte ne peut jamais gagner : la levée revient à celui qui l'a ouverte.</p>
-        <figure>
+        <p>Le joueur qui a la main pose une carte. L’autre doit fournir la couleur demandée s’il le peut. La carte la plus forte de cette couleur remporte la levée, et son joueur commence la suivante.</p>
+        <p>S’il n’a pas la couleur, il pose une carte face cachée. Cette carte ne peut jamais gagner : la levée revient à celui qui l’a ouverte.</p>
+        <figure data-revele>
           <img src="/images/sipa-table.webp" alt="Une partie de SIPA contre Wiyao : un 10 de cœur est joué, et le joueur, sans cœur en main, doit poser une carte face cachée" width="520" height="1131" loading="lazy">
           <figcaption>Pas de cœur en main : il faut poser une carte face cachée.</figcaption>
         </figure>
 
         <h2>Seule la dernière levée compte</h2>
-        <p>Une manche compte cinq levées, mais les quatre premières ne rapportent rien. Elles servent à prendre la main au bon moment et à vider le jeu de l'adversaire. Seul le gagnant de la cinquième levée marque des points :</p>
+        <p>Une manche compte cinq levées, mais les quatre premières ne rapportent rien. Elles servent à prendre la main au bon moment et à vider le jeu de l’adversaire. Seul le gagnant de la cinquième levée marque des points :</p>
         <table class="points">
           <thead>
             <tr><th scope="col">Dernière levée gagnée…</th><th scope="col">Points</th></tr>
@@ -52,49 +72,57 @@
           <tbody>
             <tr><td>avec un 8, un 9, un 10, un Valet, une Dame ou un Roi</td><td>1</td></tr>
             <tr><td>avec un 7</td><td>2</td></tr>
-            <tr><td>avec un 7, après avoir gagné la 4e levée avec un autre 7 (le « double 7 »)</td><td>4</td></tr>
+            <tr><td>avec un 7, après avoir gagné la 4<sup>e</sup> levée avec un autre 7 (le « double 7 »)</td><td>4</td></tr>
           </tbody>
         </table>
-        <p>Le gagnant de la dernière levée distribue la manche suivante et joue en premier. La partie se joue en un nombre de points choisi au départ, par exemple 6 ou 12. Si un joueur atteint la moitié de ce score alors que l'autre n'a encore rien marqué, la partie s'arrête : c'est un jeu blanc.</p>
+        <p>Le gagnant de la dernière levée distribue la manche suivante et joue en premier. La partie se joue en un nombre de points choisi au départ, par exemple 6 ou 12. Si un joueur atteint la moitié de ce score alors que l’autre n’a encore rien marqué, la partie s’arrête : c’est un jeu blanc.</p>
 
         <h2>Un exemple de fin de manche</h2>
-        <div class="encadre">
-          <p>Il reste deux cartes à chacun et c'est à vous de jouer. Vous avez le <span class="carte">7 ♠</span> et le <span class="carte">Valet ♣</span>. Votre adversaire a le <span class="carte rouge">9 ♥</span> et le <span class="carte">8 ♣</span>, mais vous ne le savez pas.</p>
-          <p>Si vous jouez le Valet d'abord, il doit fournir trèfle avec son 8 : vous gagnez la 4e levée. À la 5e, votre 7 de pique ouvre ; il n'a pas de pique et pose son 9 face cachée. Vous gagnez la dernière levée avec un 7 : 2 points.</p>
-          <p>Si vous jouez le 7 d'abord, vous gagnez aussi la 4e levée, mais la 5e se gagne avec le Valet : 1 point seulement.</p>
+        <div class="encadre" data-revele>
+          <span class="etiquette">Exemple</span>
+          <p>Il reste deux cartes à chacun et c’est à vous de jouer. Vous avez le <span class="carte">7&nbsp;♠</span> et le <span class="carte">Valet&nbsp;♣</span>. Votre adversaire a le <span class="carte rouge">9&nbsp;♥</span> et le <span class="carte">8&nbsp;♣</span>, mais vous ne le savez pas.</p>
+          <p>Si vous jouez le Valet d’abord, il doit fournir trèfle avec son 8 : vous gagnez la 4<sup>e</sup> levée. À la 5<sup>e</sup>, votre 7 de pique ouvre ; il n’a pas de pique et pose son 9 face cachée. Vous gagnez la dernière levée avec un 7 : 2 points.</p>
+          <p>Si vous jouez le 7 d’abord, vous gagnez aussi la 4<sup>e</sup> levée, mais la 5<sup>e</sup> se gagne avec le Valet : 1 point seulement.</p>
         </div>
-        <p>Garder un 7 pour la fin peut donc rapporter deux fois plus. Le risque : si l'adversaire a encore un pique plus fort, votre 7 perd la dernière levée, et c'est lui qui marque.</p>
+        <p>Garder un 7 pour la fin peut donc rapporter deux fois plus. Le risque : si l’adversaire a encore un pique plus fort, votre 7 perd la dernière levée, et c’est lui qui marque.</p>
 
         <h2>Jouer au SIPA sur téléphone ou dans le navigateur</h2>
-        <p>L'app SIPA reprend cette variante à 28 cartes. On peut y jouer :</p>
+        <p>Notre app SIPA reprend cette variante à 28 cartes. On peut y jouer :</p>
         <ul class="liste-points">
           <li>seul, contre Wiyao, Eyram ou Mèhèza, en trois niveaux : Facile, Moyen et Avancé ;</li>
-          <li>en ligne, en 1 contre 1, contre d'autres joueurs ;</li>
+          <li>en ligne, en 1 contre 1, contre d’autres joueurs ;</li>
           <li>entre amis, en salle privée ou en invitant un ami ;</li>
           <li>en tournoi, plusieurs fois par semaine.</li>
         </ul>
         <p>Après une partie, Edem, le coach, montre les coups qui pouvaient rapporter plus, carte par carte.</p>
         <p>Le jeu est gratuit sur Android, sur iPhone et dans le navigateur.</p>
         <div class="boutons">
-          <a class="bouton bouton-prune" href="https://jouer.sipa.shadgramers.com">Jouer dans le navigateur</a>
-          <a class="bouton bouton-prune" href="https://play.google.com/store/apps/details?id=com.shagramers.sipa">Google Play</a>
-          <a class="bouton bouton-prune" href="https://apps.apple.com/fr/app/sipa-jeu-de-cartes/id6753187291">App Store</a>
+          <a class="bouton bouton-rouge" href="https://jouer.sipa.shadgramers.com">Jouer dans le navigateur</a>
+          <a class="bouton bouton-contour-noir" href="https://play.google.com/store/apps/details?id=com.shagramers.sipa">Google Play</a>
+          <a class="bouton bouton-contour-noir" href="https://apps.apple.com/fr/app/sipa-jeu-de-cartes/id6753187291">App Store</a>
         </div>
-        <p class="liens-sipa">Les règles complètes, le classement et le règlement des tournois sont sur le <a href="https://sipa.shadgramers.com/">site du jeu</a>.</p>
+        <p>Les règles complètes, le classement et le règlement des tournois sont sur le <a href="https://sipa.shadgramers.com/">site du jeu</a>.</p>
       </article>
     </div>
   </main>
 
   <footer class="pied">
     <div class="conteneur">
-      <nav aria-label="Liens du site">
-        <ul>
-          <li><a href="/sipa" aria-current="page">Le jeu SIPA</a></li>
-          <li><a href="/a-propos">À propos</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/confidentialite">Confidentialité</a></li>
-        </ul>
-      </nav>
+      <div class="pied-haut">
+        <a class="marque" href="/">
+          <svg class="marque-symbole" viewBox="267 203 373 336" aria-hidden="true"><path fill="currentColor" d="M267 235C267 217 281 203 303 203H338L334 222V471H500C545 471 566 466 590 451L640 424L604 486C584 520 550 539 500 539H303C281 539 267 525 267 503Z"/><path fill="currentColor" d="M356 272C356 258 366 249 382 249H515C563 249 591 277 591 325V385C591 432 560 455 508 460.5C514 447 524 420 524 392V340C524 316 508 301.5 484 301.5H356Z"/></svg>
+          <img class="marque-nom" src="/images/nom-shadgramers.svg" alt="ShaDGramers, accueil" width="168" height="9">
+        </a>
+        <nav aria-label="Liens du site">
+          <ul>
+            <li><a href="/sipa" aria-current="page">Le jeu SIPA</a></li>
+            <li><a href="https://www.youtube.com/@shadgramers">YouTube</a></li>
+            <li><a href="/a-propos">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/confidentialite">Confidentialité</a></li>
+          </ul>
+        </nav>
+      </div>
       <p class="copyright">© 2026 ShaDGramers</p>
     </div>
   </footer>
